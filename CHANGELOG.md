@@ -1,5 +1,17 @@
 # Changelog
 
+## 3.0.1 - 2026-06-05
+
+Documentation and capture prompts for Cursor hooks (no command or API changes).
+
+### Changed
+
+- Consolidated Cursor hooks setup into [README.md](README.md#optional-cursor-hooks); removed `docs/CURSOR-HOOKS.md`
+
+### Added
+
+- **`stubs/mcp-capture-prompts.md`** — session-end prompts with required `title` and `summary` for each `mcp:append`
+
 ## 3.0.0 - 2026-06-04
 
 Compaction-resilient knowledge capture: append during session, unified push at end, optional extract fallback.
@@ -15,7 +27,7 @@ Compaction-resilient knowledge capture: append during session, unified push at e
 - **`mcp:extract-session`** — fallback salvage from git and/or agent transcript into drafts (review before push)
 - Draft paths: `docs/.mcp-session/lessons-draft.jsonl`, `docs/.mcp-session/project-details-draft.jsonl`
 - `--no-truncate` on `mcp:push` for both buckets
-- Cursor hook stubs and [docs/CURSOR-HOOKS.md](docs/CURSOR-HOOKS.md)
+- Cursor hook stubs; setup documented in [README.md](README.md#optional-cursor-hooks)
 
 ### Migration
 
