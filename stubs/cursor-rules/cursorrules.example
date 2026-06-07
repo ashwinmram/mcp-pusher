@@ -1,0 +1,10 @@
+# MCP + Lessons Learned workflow
+
+This project uses the Lessons Learned MCP server and ashwinmram/mcp-pusher.
+
+- **Session startup:** Follow `.cursor/rules/mcp-session-startup.mdc` (query lessons + project details at session start).
+- **Knowledge capture:** Follow `.cursor/rules/mcp-session-capture.mdc` before compaction or at session end.
+- **Push once:** `php artisan mcp:push --source=<your-project>` — must match Project Details MCP `?project=`.
+- **Install or refresh rules:** `php artisan mcp:install-cursor-rules`
+
+For Laravel stack conventions, enable Laravel Boost MCP if available.
